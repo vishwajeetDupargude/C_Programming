@@ -1,25 +1,26 @@
+// program divide to numbers
 #include<stdio.h>
-void PrintEven(int iNo)
+
+int Divide(int iNo1, int iNo2)
 {
-    int iCnt = 0;
-    int iNum = 2;
-
-    if (iNo <= 0)
+    int ians = 0;
+    if(iNo2 == 0)
     {
-        return ;
+        return -1;
     }
-    for(iCnt = 1; iCnt<=iNo;iCnt++)
-    {
-        printf("%d\n",iNum);
-        iNum= iNum+2;
-    }
+    ians = iNo1/iNo2;
 
+    return ians;
 }
+
 int main()
 {
-    int iValue = 0;
-    printf("Enter Even number ");
-    scanf("%d",&iValue);
-    PrintEven(iValue);
+    int iValue1 =15,  iValue2 = 5;
+    int iret= 0;
+
+    iret = Divide(iValue1,iValue2);
+    printf("Divison is %d",iret);
+
     return 0;
+
 }

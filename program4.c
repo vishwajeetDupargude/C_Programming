@@ -1,22 +1,28 @@
-#include<stdio.h>
+// Accept number divisible by 5 or not 
 
-void DisplayConvert(char cValue)
+#include<stdio.h>
+#include<stdbool.h>
+
+bool Check (int iNo)
 {
-    if((cValue >='A')&&(cValue <= 'Z'))
+    if((i%5)==0)
     {
-        printf("%c",cValue+32);
-    }
-    else if ((cValue >='a')&&(cValue <='z'))
-    {
-        printf("%c",cValue-32);
+        return true;
     }
 }
+
 int main()
 {
-    char cValue = '\0';
-    printf("Enter character\n");
-    scanf("%c",&cValue);
-    DisplayConvert(cValue);
+    int iValue = 0;
+    bool bRet = false;
 
-    return 0;
+    printf("Enter a Frequeency:");
+    scanf("%d",&iValue);
+
+    bRet = Check(iValue);
+
+    if(bRet == true)
+    {
+        printf("Divisble by 5");
+    }
 } 
