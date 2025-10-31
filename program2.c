@@ -1,17 +1,28 @@
 #include<stdio.h>
-
-void Display()
+void DisplatFactor(int iNo)
 {
     int i = 0;
-    for(i = 1; i<=5; i++);
+    
+
+    if (iNo <= 0)
     {
-        printf("Marvellous");
+        iNo= -iNo;
+    }
+
+        
+    for(i = 1; i<=(iNo/2);i++)
+    {
+        if((iNo%i)==0)
+        printf("%d\n",i);
+        
     }
 
 }
 int main()
 {
-    Display();
+    int iValue = 0;
+    printf("Enter Even number ");
+    scanf("%d",&iValue);
+    DisplatFactor(iValue);
     return 0;
-    
 }
